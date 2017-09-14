@@ -2,7 +2,9 @@
 
 This  is the README for Story, which is a mini adventure generator that uses the Ruby Faker gem from
 https://github.com/stympy/faker as part of a deliberate coding exercise. You can do this on your own
-or as part of a pair programming experience.
+or as part of a pair programming experience. Only look at the code here when you're done. The goal is
+to think about how you'd do this, and to work at developing code to make this work. There is no 'correct'
+version of this code. The purpose is deliberate practice. 
 
 The original version of this is based on David Malki's 'The Electro-Plasmic Hydrocephalic Genre-Fiction
 Generator 2000' work. The prototype diagram is at http://wondermark.com/554/ and you can follow a link
