@@ -27,13 +27,13 @@ then wrapped up with time for people to express what they found most useful duri
 
 Your story should have this format, with each of the captilised words should come from Faker.
 
-@story =  "In a(n) ADJECTIVE +  NOUN" +
+            "In a(n) ADJECTIVE +  NOUN" +
             " a young PERSON " +
             " stumbles across a(n) OBJECT " +
             " which spurs him into conflict with NAME ANIMAL " +
             " with the help of a(n) ASSISTANT " +
             " and her OBJECT/TOOL " +
-            " culminating in ACTION ."
+            " culminating in ACTION  where someone shouts 'QUOTE'."
 
 First round:
 Start by thinking about how you'd generate a ministory with Rails: what rests in the controller and what
