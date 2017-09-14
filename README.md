@@ -15,11 +15,14 @@ To use Faker you do the following:
     gem install faker
 
 Add this line to your Gemfile:
+    
     gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 
 Then add this line at the top of your file as needed:
+    
     require 'faker' .
 From there you can do things like this:
+    
     @name = Faker::Pokemon.name
     @quote = Faker::HarryPotter.quote
 
