@@ -12,6 +12,7 @@ there to a version written in Javascript and python.  Look at it later. It won't
 exercise.
 
 To use Faker you do the following:
+    
     gem install faker
 
 Add this line to your Gemfile:
