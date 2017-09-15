@@ -11,6 +11,12 @@ Generator 2000' work. The prototype diagram is at http://wondermark.com/554/ and
 there to a version written in Javascript and python.  Look at it later. It won't help you with this
 exercise.
 
+To begin this session create a new Rails application with the command:
+
+    rails new story
+
+This will create a new rails application for you to use in this exercise.
+
 To use Faker you do the following:
     
     gem install faker
@@ -19,21 +25,38 @@ Add this line to your Gemfile:
     
     gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 
-Then add this line at the top of your file as needed:
+You now need to run bundler again with:
+
+    bundle install
+
+Now, create a new controller with this command:
+
+    rails generate controller story index
+
+This will create a new controller called 'story' with the method 'index'. It will generate
+app/views/story/index.html.erb, and also add 'story/index' to yournroute.rb file so that the page
+is available at localhost:3000/story/index
+
+Now add this 'require faker' line to the top of your new controller:
     
-    require 'faker' .
-From there you can do things like this:
+    class StoryController < ApplicationController
+    require 'faker'
+    def index 
+    
+From there you can do things like this (which are not needed):
     
     @name = Faker::Pokemon.name
     @quote = Faker::HarryPotter.quote
 
-The format for our deliberate practice is as follows:
+Now we're ready for the main fun of this exercise.
+
 We offer up the challenge, then think about options for developing a solution, and code for 12 minutes,
 then discuss how people are approaching the problem, and what they're trying to do next. This should be
 repeated three times and then wrapped up with time for people to express what they found most useful during
 the session. This should take an hour.
 
-Your story should have this format, with each of the captilised words should come from Faker.
+Your story should have this format, with each of the captilised words should come from Faker as
+#{Faker::Pokemon.name} (or whatever) where you see the capitalised words.
 
             "In a(n) ADJECTIVE +  NOUN" +
             " a young PERSON " +
