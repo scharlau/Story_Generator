@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/stympy/faker.git
-  revision: 844b3259b5f3c28e09baedc99b4fb77382342429
+  revision: d5d22148b4144cfc165ea9b8b8551cec11ba88f7
   branch: master
   specs:
     faker (1.9.1)
@@ -85,7 +85,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
-    marcel (0.3.2)
+    marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (0.9.0)
     mimemagic (0.3.2)

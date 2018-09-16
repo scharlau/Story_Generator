@@ -1,3 +1,11 @@
 <h1>Tell me a story...</h1>
+<h4>pulling the story from the controller</h4>
 <p>Refresh the page for a new story</p>
 <blockquote><%= @story %></blockquote>
+
+<h4>generating the story in the view</h4>
+<blockquote>In a(n) <%=Faker::Hipster.word %>  <%= Faker::Job.field %> a young <%= Faker::Hobbit.character %>
+stumbles across a(n) <%= Faker::Lovecraft.tome %> which spurs him into conflict with 
+<%= Faker::StarTrek.villain %> and her <%= Faker::Hacker.noun %> culminating in <%= Faker::Pokemon.move %>
+where someone shouts '<%= Faker::Simpsons.quote %>' .</blockquote>
+
