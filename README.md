@@ -22,7 +22,7 @@ To use Faker you do the following:
     
     gem install faker
 
-Add this line to your Gemfile after the line for the Rubyracer gem:
+Add this line to your Gemfile after one of the commented out gems that are there such as bcrypt or puma:
     
     gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 
@@ -46,6 +46,20 @@ Now we're ready for the main fun of this exercise.
 
 Under 'deliberate practice' we offer up the challenge, then think about options for developing a solution, and code for 12 minutes. After that we pause to discuss how people are approaching the problem, and what they're trying to do. This should be repeated three times and then wrapped up with time for people to express what they found most useful during the session. This should take an hour.
 
+## A word about Rails views and controllers
+
+If you want to use a ruby expression in a view, then you can put something like this in the view:
+
+           <p>In a(n) <%=Faker::Hipster.word %>  <%= Faker::Job.field %> a young <%= Faker::Movies::Hobbit.character %></p>
+If you wanted to put the same part in a controller, you could put the values in a string and then send the string to the view. You could do the two parts like this.
+Put this in the controller 'index' method (along with the rest of the parts further below):
+            @story =  "In a(n) #{Faker::Hipster.word}  #{Faker::Job.field }" +
+            " a young #{Faker::Movies::Hobbit.character } "
+Put this in the view using the @story instance value:
+            <blockquote><%= @story %></blockquote>
+
+Your job is to work out which approach is the right one for you. That's part of the exercise.
+
 Your story should have this format shown below. Each of the captilised words should come from Faker as #{Faker::Pokemon.name} (or whatever) where you see the capitalised words. Look at the Faker <a href="https://github.com/faker-ruby/faker#generators" target="_blank">documentation</a> for the types of words you can generate.
 
             "In a(n) ADJECTIVE +  NOUN" +
@@ -57,7 +71,7 @@ Your story should have this format shown below. Each of the captilised words sho
             " culminating in ACTION  where someone shouts 'QUOTE'."
 
 First round:
-Start by thinking about how you'd generate a ministory with Rails: what rests in the controller and what goes in the view. Then start coding your solution until the time is up.
+Start by thinking about how you'd generate a ministory with Rails based upon what you know from above:  what code goes in the controller and what goes in the view. Then start coding your solution until the time is up.
 
 Second round:
 If you have this running, then consider how you could generate, and then display multiple stories at the same time, which could be voted on by the viewer. You don't need to make the voting work. Just show multiple stories on the page.
