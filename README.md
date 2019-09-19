@@ -49,13 +49,17 @@ Under 'deliberate practice' we offer up the challenge, then think about options 
 ## A word about Rails views and controllers
 
 If you want to use a ruby expression in a view, then you can put something like this in the view:
-```<p>In a(n) <%=Faker::Hipster.word %>  <%= Faker::Job.field %> a young <%= Faker::Movies::Hobbit.character %></p>
+```html 
+<p>In a(n) <%=Faker::Hipster.word %>  <%= Faker::Job.field %> a young <%= Faker::Movies::Hobbit.character %></p>
+```
 If you wanted to put the same part in a controller, you could put the values in a string and then send the string to the view. You could do the two parts like this.
 Put this in the controller 'index' method (along with the rest of the parts further below):
             @story =  "In a(n) #{Faker::Hipster.word}  #{Faker::Job.field }" +
             " a young #{Faker::Movies::Hobbit.character } "
 Put this in the view using the @story instance value:
-```<blockquote><%= @story %></blockquote>
+```html
+<blockquote><%= @story %></blockquote>
+``` 
 
 Your job is to work out which approach is the right one for you. That's part of the exercise.
 
