@@ -8,27 +8,35 @@ Faker lets you do things like this to generate different values for variables:
     @quote = Faker::HarryPotter.quote
 
 You can do this on your own or as part of a pair programming experience. Only look at the code here when you're done with your first attempt at the exercise. 
-The goal of 'deliberate practice' is to think about how you'd solve this challenge, and to work at developing code to make this work. There is no 'correct' version of this code. The purpose is deliberate practice. The goal is to look at this very simple application done in Rails so that you understand how variables in controllers are shown up in the views you see in the browser.
+
+The goal of 'deliberate practice' is to think about how you'd solve this challenge, and to work at developing code to make this work. There is no single 'correct' version of this code. The purpose of the exercise it become familiar with different ways of making the application work. You should explore how this simple application is done in Rails so that you understand how variables in controllers are show up in the views you see in the browser.
 
 The original version of this is based on David Malki's 'The Electro-Plasmic Hydrocephalic Genre-Fiction Generator 2000' work. The prototype diagram is at http://wondermark.com/554/ and you can follow a link there to a version written in Javascript and python.  Look at it later. It won't help you with this exercise in Ruby and Rails.
 
-To begin this session create a new Rails application with the command:
+### Work with a Good Text Editor
+Rails applications are lightweight and only need a good text editor for managing their development. You need one of these good examples that students and developers use. They are available on for Windows, Mac OS and Linux too. In order of preference go for either Visual Code https://code.visualstudio.com or Sublime Text https://www.sublimetext.com as options that enable you to run a terminal in the same space as where you're editing files too. 
+
+## Start the Work by Creating a Rails Application 
+
+To begin this session open a terminal and create a new Rails application with the command:
 
     rails new story
 
 This will create a new rails application for you to use in this exercise.
 
-To use Faker you do the following:
+To use Faker you need install the Faker gem with:
     
     gem install faker
 
-Add this line to your Gemfile after one of the commented out gems that are there such as bcrypt or puma:
+Now add this line to your Gemfile after one of the commented out gems that are there such as bcrypt or puma:
     
-    gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
+    gem 'faker' 
 
 You now need to run bundler again so that Faker is included in your application. Use this command:
 
     bundle install
+
+If you are using Rails 6, then you also need to run this command: 'Yarn install - - check-files' in order to pull together other components that are required by Rails.
 
 Now, create a new controller with this command:
 
@@ -49,7 +57,7 @@ Under 'deliberate practice' we offer up the challenge, then think about options 
 ## A word about Rails views and controllers
 
 If you want to use a ruby expression in a view, then you can put something like this in the view:
-```html 
+ 
 <p>In a(n) <%=Faker::Hipster.word %>  <%= Faker::Job.field %> a young <%= Faker::Movies::Hobbit.character %></p>
 ```
 If you wanted to put the same part in a controller, you could put the values in a string and then send the string to the view. You could do the two parts like this.
@@ -61,7 +69,7 @@ Put this in the view using the @story instance value:
 <blockquote><%= @story %></blockquote>
 ``` 
 
-Your job is to work out which approach is the right one for you. That's part of the exercise.
+#### Your job is to work out which approach is the right one for you. That's part of the exercise.
 
 Your story should have this format shown below. Each of the captilised words should come from Faker as #{Faker::Pokemon.name} (or whatever) where you see the capitalised words. Look at the Faker <a href="https://github.com/faker-ruby/faker#generators" target="_blank">documentation</a> for the types of words you can generate.
 

@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 #use faker for generating story items
-gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
+gem 'faker'
 gem 'ffi', '~> 1.9.24'
 gem 'sprockets', '~> 3.7.2'
 # Use jquery as the JavaScript library
