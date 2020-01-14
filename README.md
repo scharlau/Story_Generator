@@ -19,6 +19,10 @@ To begin this session open a terminal and create a new Rails application with th
 
 This will create a new rails application for you to use in this exercise.
 
+Move the terminal into the 'story' directory with 
+
+    cd story
+
 To use Faker you need install the Faker gem with:
     
     gem install faker
@@ -27,13 +31,13 @@ Now add this line to your Gemfile after one of the commented out gems that are t
     
     gem 'faker' 
 
-You now need to run bundler again so that Faker is included in your application. Use this command:
+You now need to run bundler so that Faker is included in your application. Use this command:
 
     bundle install
 
 If you are using Rails 6, then you also need to run this command: 'Yarn install - - check-files' in order to pull together other components that are required by Rails.
 
-Now, create a new controller with this command:
+Now create a new controller with this command:
 
     rails generate controller story index
 
