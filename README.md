@@ -45,6 +45,12 @@ We need to add this 'require faker' line to the top of your new controller so th
     require 'faker'
     def index 
 
+You can now start the rails server with the command 
+
+    rails server
+
+You can leave this running as you work with the code. If you go to localhost:3000/story/index you'll see the template view of the story/index method. Your errors will appear as you reload the page, then you fix them, and then reload the page in the browser again to see if you fixed the error.
+
 Now we're ready for the main fun of this exercise.
 
 ## A word about Rails views and controllers
