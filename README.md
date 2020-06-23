@@ -31,11 +31,11 @@ Now add this line to your Gemfile after one of the commented out gems that are t
     
     gem 'faker' 
 
-You now need to run bundler so that Faker is included in your application. Use this command:
+You now need to run a number of commands to prepare the application:
 
     bundle install
-
-If you are using Rails 6, then you also need to run this command: 'Yarn install - - check-files' in order to pull together other components that are required by Rails.
+    rails webpacker:install
+    yarn install -- check-files
 
 Now create a new controller with this command:
 
@@ -62,8 +62,8 @@ Now we're ready for the main fun of this exercise.
 Rails applications always have the same structure. You newly created files are under app/controllers/story_controller.rb and app/views/story/index.html.erb These are the only two files that you need to work with for the exercise.
 
 Your goal is to generate a story in the format shown below. Each of the captilised words should come from Faker as #{Faker::Pokemon.name} (or whatever) where you see the capitalised words. You could also use these:
-    @name = Faker::Pokemon.name
-    @quote = Faker::HarryPotter.quote
+    @name = Faker::Game::Pokemon.name
+    @quote = Faker::Movies::HarryPotter.quote
 
 Look at the Faker <a href="https://github.com/faker-ruby/faker#generators" target="_blank">documentation</a> for the types of words you can generate.
 
